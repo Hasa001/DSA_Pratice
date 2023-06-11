@@ -27,7 +27,13 @@ public class numberRightandLeft {
             return;
         }
         printLnum(index,1);
-        printblank(2*(n-index));
+        if(index<9){
+            int count=9-index;
+            printblank(4*(n-index)-(2*count));
+        }
+        else{
+            printblank(4*(n-index));
+        }
         printRnum(index);
         System.out.println(); 
         LeftandRightnum(n,index+1); 
@@ -35,6 +41,6 @@ public class numberRightandLeft {
 
    public static void main(String[] args) {
     
-    LeftandRightnum(5, 1);
+    LeftandRightnum(25, 1);
    } 
 }
